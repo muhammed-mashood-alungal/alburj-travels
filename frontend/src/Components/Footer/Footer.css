@@ -1,0 +1,68 @@
+/* Footer Styles */
+.footer {
+    background: #333;
+    color: #fff;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer .footer-section {
+    flex: 1;
+    padding: 25px;
+}
+
+.footer .logo-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer .logo-text span {
+    color:  var(--primary-red);
+}
+
+.footer .contact span, .footer .socials a {
+    display: block;
+    margin: 10px 0;
+}
+
+.footer .socials a {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.footer .socials a:hover {
+    color: var(--primary-red);
+}
+
+.footer .links ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.footer .links ul a:hover {
+    color: red;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

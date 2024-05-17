@@ -1,0 +1,40 @@
+.services{
+    color: #fff;
+ width: 100%;
+ display: flex;
+ height: max-content;
+ padding: 1rem;
+}
+.service h4{
+    font-weight: 700;
+    
+} 
+.services-header{
+    padding: 2rem;
+}
+.services-header h2{
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    
+}   
+.service-section{
+    background:linear-gradient(rgb(7, 0, 1),rgba(255, 0, 0, 0.39)),url('../../assets/services.jpg');
+    
+}
+.globe-icon{
+     font-size: 35px;
+     margin-left: 0;
+     transition: margin-left ease-in-out .2s;
+}
+.globe-icon:hover{
+     margin-left: 3px;
+}
+.service-icon-div{
+    margin-left: 5px;
+    padding-top: 15px;
+     width: 22%;
+}
+.service{
+    display: flex;
+}
