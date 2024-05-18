@@ -6,7 +6,7 @@ import { faArrowRight,faLocationDot,faSun ,faMoon ,faStar} from '@fortawesome/fr
 function Packages() {
   return (
     <>
-      <section className="container">
+      <section className="container" id='package-section'>
          <div className="package-title-div">
           <h2 className='package-title'>Here is Our <font className="highlights"> Popular Packages </font>to Explore </h2>
          </div>

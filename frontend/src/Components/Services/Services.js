@@ -5,7 +5,7 @@ import {faGlobe} from '@fortawesome/free-solid-svg-icons'
 function Services() {
   return (
     <>
-      <section className="service-section">
+      <section className="service-section" id='service-section'>
         <div className="container">
         <div className="services-header">
             <h2>We offer professional <font className="highlights">Services</font> as well</h2>

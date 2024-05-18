@@ -47,11 +47,17 @@ nav ul li a{
 
 }
 nav ul li a:hover{
-
   font-weight: 700;
   color: #333;
 }
-.login-btn{
+.navbar-item{
+  width: 150px;
+}
+.navbar-item:hover{
+  font-weight: 700;
+  color: #333;
+}
+.nav-login-btn{
   font-weight: 700;
   width: 100px;
   height: 30px;
@@ -59,6 +65,10 @@ nav ul li a:hover{
   border: 1px red;
  cursor: pointer;
 
+}
+.inner-page-nav{
+  background-color: #dc143c; /* Adjust as needed */
+  box-shadow: 0px 4px 10px rgba(59, 50, 50, 0.356);
 }
 .login-btn:hover{
   color: red;

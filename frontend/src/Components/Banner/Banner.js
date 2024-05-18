@@ -5,7 +5,8 @@ import {faPlaneCircleCheck , faAddressBook} from '@fortawesome/free-solid-svg-ic
 
 function Banner() {
   return (
-    <div className='banner'>
+    <section id='home-section'>
+ <div className='banner'>
        <div className='background-image'>
     <div className='heading-div'>
       <h1>Explore The Miracles of World  With <br /> our Agency</h1>
@@ -19,6 +20,8 @@ function Banner() {
    <div className='shadow-div'></div>
     </div>
     </div>
+    </section>
+   
    
   )
 }

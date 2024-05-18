@@ -5,7 +5,7 @@ import { faPhoneVolume,faSquareWhatsapp,faEnvelope} from '@fortawesome/free-soli
 function ContactUs() {
   return (
     <>
-      <section className='container' >
+      <section className='container' id='contact-section'>
          <div>
             <div className="contact-box">
                 <h2 className='contact-header'><font  className="highlights">Get in Touch</font> with Us</h2>
