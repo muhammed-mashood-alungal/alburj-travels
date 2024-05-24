@@ -1,3 +1,6 @@
+.top-deal-section{
+  margin-top: 65px;
+}
 .deal-title-div{
     padding: 1.5rem;
     display: flex;
@@ -8,8 +11,6 @@
 .deal-title{
     color: rgb(0, 0, 0);
     font-weight: 700;
-    
-    
     border-radius: 10px;
     height: 50px;
     padding: 9px;

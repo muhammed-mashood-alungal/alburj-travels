@@ -1,0 +1,53 @@
+.add-review-section{
+   height: 80vh;
+   display:flex;
+   justify-content: center;
+}
+.add-review-div{
+    width: 70%;
+    height:55vh;
+    padding: 20px;
+    margin-top: 6rem;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 6px 6px 10px #ccc;
+}
+.add-review-div h2{
+   color: var(--primary-red);
+   font-weight: 700;
+}
+.review-input{
+      width: 80%;
+    height: 40px;
+     border: 0;
+     border-radius: 10px;
+     border: 0.5px solid rgb(175, 175, 175);
+     margin: 5px;
+     padding: 10px;
+}
+.review-comment-input{
+    padding: 10px;
+    width: 80%;
+    height: 120px;
+    border: 0;
+    border-radius: 10px;
+    border: 0.5px solid rgb(175, 175, 175);
+    margin: 5px;
+}
+.add-review-btn{
+    background-color: var(--primary-red);
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+
+}
+.add-review-btn:hover{
+    border: thin solid var(--primary-red);
+    color: var(--primary-red);
+    background-color: #fff;
+}

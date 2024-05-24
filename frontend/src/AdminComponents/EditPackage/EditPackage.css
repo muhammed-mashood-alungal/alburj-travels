@@ -1,0 +1,229 @@
+.package-input{
+    width: 80%;
+    height: 40px;
+     border: 0;
+     border-radius: 10px;
+     border: 0.5px solid rgb(175, 175, 175);
+     margin: 5px;
+     padding: 10px;
+}
+.admin-package-section{
+    margin-left: 15%;
+    padding: 20px;
+}
+.duration-input{
+    width: 39%;
+}
+.edit-package{
+   box-shadow:  2px 2px 8px rgba(131, 127, 127, 0.356); 
+   border-radius: 20px;
+   padding: 30px;
+}
+.edit-package h2{
+    font-weight: 700;
+    color: var(--primary-red);
+}
+.add-packages p{
+    margin-bottom: 2px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.description-input{
+    width: 80%;
+    height: 150px;
+}
+.plus-icon{
+   
+    font-weight: 800;
+    color:var(--primary-red);
+}
+
+  .custom-file-selector-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+    border: thin solid rgb(175, 175, 175);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 120px;
+    margin: 5px;
+  }
+  
+  .custom-file-selector-button span {
+    
+    color: var(--primary-red);
+  }
+
+  .custom-file-selector-button input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+ .image-preview-div{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+   height: max-content;
+    gap: 1rem;
+    width: 400px;
+    overflow-x: auto;
+    box-shadow: inset -5px -5px 15px -10px rgba(0, 0, 0, 0.322);
+ }
+ .preview-img{
+    box-shadow:  2px 2px 8px rgba(131, 127, 127, 0.356); 
+    display: inline-block;
+    height: min-content;
+ }
+ .image-preview-div::-webkit-scrollbar{
+    display: none;
+}
+.trash-icon{
+    color: black;
+    font-size: 1em;
+
+}
+
+.dlt-images{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+    border: thin solid rgb(175, 175, 175);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 120px;
+    margin: 5px;
+}
+.dlt-images p{
+    margin-left: 0;
+}
+.dropdown-container {
+    margin-bottom: 20px;
+  }
+  
+  .dropdown-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    max-width: 200px;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected-options h3 {
+    margin-bottom: 10px;
+  }
+  
+  .selected-options ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  
+  .selected-options li {
+    margin: 3px;
+    flex: 0 0 auto;
+    padding: 5px 5px;
+    background-color: #dddddd;
+    display: inline-flex;
+    border-radius: 20px;
+  }
+  .selected-options{
+    color: black;
+    display: flex;
+    width: 90%;
+  }
+  select{
+    background-color: none;
+   border-radius: 10px;
+   color: var(--primary-red);
+   margin-left: 5px;
+  }
+  select:hover{
+    font-weight: 600;
+  }
+  select option{
+    color: var(--primary-red);
+    border-radius: 10px;
+    font-weight: 700;
+  }
+ .options:hover{
+  color: black;
+  font-weight: 600;
+  }
+  .dlt-activities{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    border: thin solid rgb(175, 175, 175);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 120px;
+    margin: 5px;
+}
+.dlt-activities:hover{
+  background-color: #ccc;
+  color: var(--primary-red);
+}
+.dlt-activities p{
+    margin-left: 0;
+}
+
+.add-btn{
+  background-color: var(--primary-red);
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  transition: all .3s ease-in-out;
+
+}
+.add-btn:hover{
+  border: thin solid var(--primary-red);
+  color: var(--primary-red);
+  background-color: #fff;
+}
+
+.cancel-btn{
+    background-color: #fff;
+    color:var(--primary-red);
+    font-weight: 700;
+    border: thin solid var(--primary-red);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+  
+  }
+  .cancel-btn:hover{
+    color: #fff;
+    background-color: var(--primary-red);
+  }

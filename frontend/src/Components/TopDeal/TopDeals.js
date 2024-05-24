@@ -8,7 +8,7 @@ import {faPlaneDeparture,faPlaneArrival,faSuitcaseRolling,faTag,
 
 function TopDeals() {
   return (
-    <div className='top-deal-div container'>
+    <div className='top-deal-section container'>
       <div className='deal-title-div'>
 
       <h2 className='deal-title'> Here is Our <font className="highlights">Top Deals</font>  For You</h2>

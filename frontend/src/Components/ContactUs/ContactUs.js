@@ -1,7 +1,7 @@
 import React from 'react'
 import '../ContactUs/ContactUs.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faPhoneVolume,faSquareWhatsapp,faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { faPhoneVolume,faEnvelope} from '@fortawesome/free-solid-svg-icons'
 function ContactUs() {
   return (
     <>

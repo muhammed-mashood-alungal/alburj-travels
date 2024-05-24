@@ -25,7 +25,7 @@ nav{
 #title-div{
   display: flex;
 }
-nav ul{
+.navbar-items{
   margin-right: 50px;
   padding-top: 5px;
 }
@@ -70,9 +70,58 @@ nav ul li a:hover{
   background-color: #dc143c; /* Adjust as needed */
   box-shadow: 0px 4px 10px rgba(59, 50, 50, 0.356);
 }
-.login-btn:hover{
-  color: red;
+.nav-login-btn:hover{
+  color: rgb(230, 98, 98);
 }
 .package-content h5{
   margin: 1px;
+}
+
+.nav-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.navbar-items.active {
+ transition: transform 0.5s ease,opacity 0.5s ease;
+ transform: translateY(-100%);
+ opacity: 0;
+ display: none;
+}
+
+@media (max-width: 965px) {
+  nav{
+    height: 60px;
+  }
+  .navbar-items {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 0;
+    background-color: var(--primary-red);
+    padding: 4px 0;
+  }
+
+  .navbar-items.active {
+    display: flex;
+    align-items: center;
+    max-height: max-content;
+     transform: translateY(0);
+     opacity: 1;
+     
+  }
+  .navbar-item:hover{
+  font-weight: 700;
+  color: #333;
+  
+}
+
+  .nav-menu-button {
+    display: block;
+  }
 }

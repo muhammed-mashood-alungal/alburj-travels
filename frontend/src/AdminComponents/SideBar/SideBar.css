@@ -1,0 +1,30 @@
+/* Sidebar.css */
+.sidebar {
+  width: 15%; /* Adjust width as needed */
+  background:var(--primary-red); /* Example background color */
+  height: 100vh; /* Make sidebar full height */
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 5px;
+ width: 100%;
+ margin-left: 10px;
+ color:#fff;
+}
+
+.sidebar li:hover {
+  color: var(--primary-red);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.sidebar .active {
+  color: var(--primary-red);
+  background-color: #fff;
+  border-radius: 10px;
+}

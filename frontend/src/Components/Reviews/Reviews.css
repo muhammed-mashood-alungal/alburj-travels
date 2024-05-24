@@ -38,3 +38,31 @@
     color: rgb(73, 73, 73);
     
 }
+.users-review-section .add-review-btn{
+    margin: 5px;
+    border-radius: 10px;
+    background-color: var(--primary-red);
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    width: 80%;
+     height: 40px;
+     transition:all .3s ease-in-out    
+}
+.users-review-section .add-review-btn:hover{
+    background: none;
+    background-color: #fff;
+    border: 1px solid  var(--primary-red) ;
+    color:  var(--primary-red);
+    font-weight: 700;
+}
+.review-add-btn-div{
+    width: 300px;
+}
+.review-plus-icon{
+    transition: margin-left .3s ease-in-out;
+    margin-left: 2px;
+}
+.users-review-section .add-review-btn:hover .review-plus-icon{
+    margin-left: 10px;
+}
