@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Footer/Footer.css';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="footer">
@@ -15,22 +15,19 @@ const Footer = () => {
                         <span> &nbsp; +1 234 567 890</span>
                         <span> &nbsp; info@travelagency.com</span>
                     </div>
-                    <div className="socials">
-                        <a href="#"><i className="fab fa-facebook"></i></a>
-                        <a href="#"><i className="fab fa-instagram"></i></a>
-                        <a href="#"><i className="fab fa-twitter"></i></a>
-                        <a href="#"><i className="fab fa-youtube"></i></a>
-                    </div>
+                    
                 </div>
 
                 <div className="footer-section links">
                     <h2>Quick Links</h2>
                     <br />
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li>
+                           <Link to='/'>Home</Link>
+                        </li>
+                        <li><Link to='/about'>About</Link></li>
+                        <li><Link to='/packages'>Packages</Link></li>
+                        <li><Link to='/contact'>Contacts</Link></li>
                     </ul>
                 </div>
 

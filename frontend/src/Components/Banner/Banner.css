@@ -29,6 +29,10 @@
      justify-content: center;
      text-align: center;
   }
+  .heading-div a{
+    text-decoration: none;
+    color: inherit;
+  }
   .heading-div h1{
     font-weight: 700;
   }

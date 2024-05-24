@@ -1,9 +1,12 @@
 import React from 'react'
 import '../Reviews/Reviews.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faPlus} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 function Reviews() {
   return (
     <>
-      <section className="container">
+      <section className="container  users-review-section">
         <div className='review-header'>
             <h2>This What our <font className='highlights'>Customers Says</font> About Us</h2>
         </div>
@@ -68,6 +71,13 @@ function Reviews() {
                 </div>
             </div>
           </div>
+      
+              <div className="review-add-btn-div">
+                <Link to='/review'>
+               <button className='add-review-btn'>Add Your Review  <FontAwesomeIcon icon={faPlus} className='review-plus-icon' />  </button>
+               </Link>
+              </div>
+        
       </section>
     </>
   )

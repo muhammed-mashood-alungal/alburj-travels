@@ -3,10 +3,16 @@ import image from '../../assets/topdeal.jpg'
 import '../Packages/Packages.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faArrowRight,faLocationDot,faSun ,faMoon ,faStar} from '@fortawesome/free-solid-svg-icons'
+import { useLocation } from 'react-router-dom'
 function Packages() {
+
+    
+    const location = useLocation();
+    const isMainPage= location.pathname === '/'
+    console.log(isMainPage)
   return (
     <>
-      <section className="container" id='package-section'>
+      <section className={`container package-section ${isMainPage?'':'inner-page'}`} id='package-section'>
          <div className="package-title-div">
           <h2 className='package-title'>Here is Our <font className="highlights"> Popular Packages </font>to Explore </h2>
          </div>

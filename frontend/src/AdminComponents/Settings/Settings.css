@@ -1,0 +1,87 @@
+.settings-section{
+    margin-left: 15%;
+    padding: 20px;
+
+}
+.settings-header{
+    display:flex;
+    justify-content: space-between;
+}
+.settings-header h2{
+    color: var(--primary-red);
+    font-weight: 700;
+}
+.edit-icon{
+    font-size: 3em;
+}
+.edit-icon:hover{
+    color: var(--primary-red);
+    
+}
+.check-icon{
+    font-size: 3em;
+}
+.check-icon:hover{
+    color: var(--primary-red);
+    
+}
+.cmpny-data-input{
+        width: 80%;
+        height: 40px;
+         border: 0;
+         border-radius: 10px;
+         border: 0.5px solid rgb(175, 175, 175);
+         margin: 5px;
+         padding: 10px;
+    
+}
+
+.settings-section h6{
+    margin-top: 12px;
+}
+.settings-section ul{
+    margin-top: 1rem;
+    list-style: none;
+}
+.cmpny-description-input{
+    width: 80%;
+    height: 150px;
+}
+.service-description-input{
+    width: 80%;
+    height: 100px;
+}
+ 
+.service-add-btn{
+    background-color: var(--primary-red);
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 15px;
+    transition: all .3s ease-in-out;
+    
+}
+.service-add-btn:hover{
+    border: thin solid var(--primary-red);
+    color: var(--primary-red);
+    background-color: #fff;
+}
+.service-dlt-btn{
+     
+    margin-top:2rem;
+    background-color:#fff;
+    color: var(--primary-red);
+    font-weight: 700;
+    border: thin solid var(--primary-red);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+}
+.service-dlt-btn:hover{
+    border: thin solid #fff;
+    color:#fff;
+    background-color: var(--primary-red);
+}

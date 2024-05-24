@@ -15,7 +15,7 @@ code {
     monospace;
 }
 
-a{
+.a{
   text-decoration: none;
   color: inherit;
   line-height: 1;
@@ -25,4 +25,8 @@ a{
 
 .highlights{
   color: var(--primary-red);
+}
+
+.flex{
+  display: flex;
 }

@@ -5,9 +5,16 @@ import { useState, useEffect  } from 'react'
 import { Link ,useLocation} from 'react-router-dom';
 import ContactUs from '../ContactUs/ContactUs';
 
-function Navbar() {
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faEllipsisVertical,faCircleXmark} from '@fortawesome/free-solid-svg-icons'
 
+function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [navBackground, setNavBackground] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
     const handleScroll = () => {
         if (window.scrollY > 100) {
@@ -33,7 +40,7 @@ function Navbar() {
         <img src={logo} alt="logo" className='logo' />
         <h3 >Al Burj Travels</h3>
         </div>
-        <ul>
+        <ul className={`navbar-items ${isMobileMenuOpen ? 'active' : ''}`}>
           <li>
           {isMainPage ? (
              <a  className="navbar-item" href='#home-section'>Home</a>
@@ -52,7 +59,7 @@ function Navbar() {
           {isMainPage ? (
              <a  className="navbar-item" href='#contact-section'>Contact</a>
           ) : (
-            <Link to="/Contact" className="navbar-item">Contact</Link>
+            <Link to="/deals" className="navbar-item">Deals</Link>
           )}  
           </li>
           <li>
@@ -64,6 +71,14 @@ function Navbar() {
           </Link>
           </li>
         </ul>
+         <button className="nav-menu-button" onClick={toggleMobileMenu}>
+          {
+            isMobileMenuOpen? <FontAwesomeIcon icon={faCircleXmark} />:
+            <FontAwesomeIcon icon={faEllipsisVertical} />
+
+          }
+       
+       </button>
       </nav>
     </div>
   )

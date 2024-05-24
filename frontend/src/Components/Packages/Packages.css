@@ -6,6 +6,9 @@
     width: 100%;
   
 }
+.package-section {
+  margin-top: 70px;
+}
 .package-title{
     text-align: center;
     font-weight: 700;
