@@ -3,7 +3,10 @@
     box-shadow: 4px 4px 10px rgba(131, 127, 127, 0.356);
     padding: 1rem;
     margin-top: 8rem;
+    margin-left: 15%;
     height: max-content;
+    width: 80%;
+   
 }
 .add-admin-box h2{
     text-align: center;
@@ -41,3 +44,8 @@
     color:  var(--primary-red);
     font-weight: 700;
 }
+.err-msg{
+    text-align: center;
+    color: red;
+    font-weight: 600;
+  }

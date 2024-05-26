@@ -24,12 +24,13 @@ module.exports={
             const isAdminExist=await Admin.findOne({name:adminData.name})
             if(isAdminExist){
               reject('admin with this name is already exist')
+              
             }else{
                 bcrypt.genSalt(10, async(err, salt)=> {
                     if (err) {
                       reject(err)
                     } else {
-                        
+                      console.log(salt)
                         adminData.password=await  bcrypt.hash(adminData.password, salt);
                         Admin.create(adminData).then((admin)=>{
                           const token= jwt.sign({admin},process.env.JWT_SECRET_KEY) 
@@ -118,6 +119,15 @@ module.exports={
         }).catch((err)=>{
           reject(err)
         })
+      })
+    },
+    removeAdmin(adminId){
+      return new Promise ((resolve,reject )=>{
+        Admin.findByIdAndDelete(adminId).then(()=>{
+          resolve('Removed successfully')
+        }).catch(()=>{[
+          reject('Error While Removing')
+        ]})
       })
     }
 }

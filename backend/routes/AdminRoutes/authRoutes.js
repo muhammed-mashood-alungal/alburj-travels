@@ -11,12 +11,14 @@ router.post('/login',(req,res)=>{
     })
 })
 
-router.post('/register',(req,res)=>{
+router.post('/register',(req,res)=>{ 
+   console.log(req.body)
     const adminData=req.body
   registerAdmin(adminData).then((admin)=>{
-    res.json(admin)
+    res.json(admin).status(200)
   }).catch((err)=>{
-    res.json(err)
+    console.log(err) 
+    res.status(409).send({message:err}) 
   })
 }
 )

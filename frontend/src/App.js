@@ -36,7 +36,7 @@ function App() {
 
     <Route path='/admin/*' element={<AdminDashboard/>} />
     <Route path='/admin/login' element={<AdminLoginPage/>} />
-    <Route path='/admin/add-admin' element={<AddAdmin/>} />
+    
     </Routes>
     </Router>
     </Fragment>

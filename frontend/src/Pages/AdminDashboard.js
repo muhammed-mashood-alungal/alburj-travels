@@ -8,6 +8,7 @@ import AdminProfile from '../AdminComponents/AdminProfile/AdminProfile';
 import Settings from '../AdminComponents/Settings/Settings';
 import EditPackage from '../AdminComponents/EditPackage/EditPackage';
 import EditDeal from '../AdminComponents/EditDeal/EditDeal';
+import AddAdmin from '../AdminComponents/AddAdmin/AddAdmin';
 function AdminDashboard() {
   
   return (
@@ -21,6 +22,7 @@ function AdminDashboard() {
         <Route path="/edit-deal" element={<EditDeal />} />
         <Route path="/profile" element={<AdminProfile />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/register" element={<AddAdmin />} />
       </Routes>
       
     </>

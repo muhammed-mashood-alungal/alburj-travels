@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllUsers, getAllAdmins } = require('../../helpers/adminHelpers');
+const { getAllUsers, getAllAdmins, removeAdmin } = require('../../helpers/adminHelpers');
 const router = express.Router();
 
 
@@ -16,6 +16,15 @@ router.get('/admins',(req,res)=>{
         res.json(admins)
     }).catch((err)=>{
         res.json(err)
+    })
+})
+router.delete('/admin/:id',(req,res)=>{
+    console.log('hello')
+    const adminId=req.params.id
+    removeAdmin(adminId).then((response)=>{
+        res.send({message:response})
+    }).catch((errMsg)=>{
+        res.send({message:errMsg})
     })
 })
 module.exports=router

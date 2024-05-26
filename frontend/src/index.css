@@ -30,3 +30,9 @@ code {
 .flex{
   display: flex;
 }
+.err-msg{
+  text-align: center;
+  color: red;
+  font-weight: 600;
+  margin:1px;
+}
