@@ -1,5 +1,5 @@
 .package-input{
-    width: 80%;
+    width: 90%;
     height: 40px;
      border: 0;
      border-radius: 10px;
@@ -47,10 +47,12 @@
     border: thin solid rgb(175, 175, 175);
     border-radius: 10px;
     cursor: pointer;
-    width: 120px;
+    width: 130px;
     margin: 5px;
   }
-  
+  .custom-file-selector-button:hover{
+    border: thin solid var(--primary-red);
+  }
   .custom-file-selector-button span {
     
     color: var(--primary-red);
@@ -71,7 +73,7 @@
     flex-direction: row;
    height: max-content;
     gap: 1rem;
-    width: 400px;
+    width: 80%;
     overflow-x: auto;
     box-shadow: inset -5px -5px 15px -10px rgba(0, 0, 0, 0.322);
  }
@@ -100,6 +102,9 @@
     cursor: pointer;
     width: 120px;
     margin: 5px;
+}
+.dlt-images:hover{
+  border: thin solid var(--primary-red);
 }
 .dlt-images p{
     margin-left: 0;
@@ -239,10 +244,15 @@
   margin: 10px;
   padding: 10px;
   transition: all .3s ease-in-out;
-
+ width:150px;
 }
 .add-btn:hover{
   border: thin solid var(--primary-red);
   color: var(--primary-red);
   background-color: #fff;
+}
+.package-err-msg{
+  text-align: left;
+  color: red;
+  font-weight: 600;
 }

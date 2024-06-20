@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import TopDeal from '../Components/TopDeal/TopDeals'
@@ -8,10 +8,13 @@ import Services from '../Components/Services/Services'
 import Reviews from '../Components/Reviews/Reviews'
 import ContactUs from '../Components/ContactUs/ContactUs'
 import Footer from '../Components/Footer/Footer'
+import axios from 'axios'
 function Home() {
+  
+ 
   return (
     <Fragment>
-     <Navbar/> 
+     <Navbar /> 
      <Banner/>
      <TopDeal/>
      <Packages/>

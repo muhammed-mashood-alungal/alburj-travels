@@ -1,14 +1,16 @@
-.top-deal-section{
-  margin-top: 65px;
+.top-deal-section {
+    margin-top: 65px;
 }
-.deal-title-div{
+
+.deal-title-div {
     padding: 1.5rem;
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100%;
 }
-.deal-title{
+
+.deal-title {
     color: rgb(0, 0, 0);
     font-weight: 700;
     border-radius: 10px;
@@ -17,83 +19,92 @@
     cursor: pointer;
     transition: all ease-in-out .3s;
 }
-.deal-title:hover{
+
+.deal-title:hover {
     font-size: 35px;
 }
-.deals{
+
+.deals {
     display: flex;
     align-content: center;
-
 }
 
-.deal{
+.deal {
     display: flex;
     flex-direction: row;
     background-color: rgb(243, 242, 242);
     width: 100%;
-   padding: 0;
-   margin-bottom:1.5rem;
-  
-   border-radius:10px ;
-   box-shadow: 2px 2px 4px rgba(131, 127, 127, 0.356);
-   transition: all ease-in-out .3s;
+    padding: 0;
+    margin-bottom: 1.5rem;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(131, 127, 127, 0.356);
+    transition: all ease-in-out .3s;
 }
-.deal:hover{
+
+.deal:hover {
     box-shadow: 2px 4px 8px rgba(131, 127, 127, 0.5);
 }
-.deal-image{
-   width: 100%;
-   height: 100%;
-   transition: transform 0.3s ease-in-out;
-   cursor: pointer;
+
+.deal-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
-.deal-image:hover{
+
+.deal-image:hover {
     transform: scale(1.2);
 }
-.potrait-container{
+
+.potrait-container {
     border-radius: 15px 0 0 15px;
     width: 45%;
-    height:188px;
+    height: 188px;
     overflow: hidden;
     position: relative;
 }
 
-.deal-content{
+.deal-content {
     padding: 5px;
     display: flex;
     flex-direction: column;
 
 }
-.deal-content p{
+
+.deal-content p {
     margin: 2px;
     font-size: 13px;
     font-weight: 400;
 }
-.deal-content h5{
-    font-weight:700px;
+
+.deal-content h5 {
+    font-weight: 700px;
 }
-.explore-btn{
+
+.explore-btn {
     margin-top: 15px;
     font-weight: 600;
     width: 100px;
     height: 30px;
     border-radius: 20px;
     border: 0;
-     cursor: pointer;
+    cursor: pointer;
     background-color: #fff;
     bottom: 2px;
-    cursor:pointer;
+    cursor: pointer;
 }
-.explore-btn:hover{
-    background:var(--primary-red);
-    color: #fff;
-  }
 
-.arrow-icon{
+.explore-btn:hover {
+    background: var(--primary-red);
+    color: #fff;
+}
+
+.arrow-icon {
     margin-left: 0;
     transition: margin-left 0.3s ease;
 }
-.explore-btn:hover .arrow-icon{
+
+.explore-btn:hover .arrow-icon {
     margin-left: 3px;
 }
-

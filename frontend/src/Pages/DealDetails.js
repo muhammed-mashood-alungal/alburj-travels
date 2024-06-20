@@ -5,11 +5,11 @@ import Footer from '../Components/Footer/Footer'
 
 function DealDetails() {
   return (
-    <div>
+    <>
       <Navbar/>
       <EachDeals/>
       <Footer/>
-    </div>
+    </>
   )
 }
 

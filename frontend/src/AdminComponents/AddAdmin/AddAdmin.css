@@ -1,4 +1,4 @@
-.add-admin-box{
+.add-admin-box {
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(131, 127, 127, 0.356);
     padding: 1rem;
@@ -6,46 +6,52 @@
     margin-left: 15%;
     height: max-content;
     width: 80%;
-   
+
 }
-.add-admin-box h2{
+
+.add-admin-box h2 {
     text-align: center;
-   color: var(--primary-red);
-   font-weight: 700;
+    color: var(--primary-red);
+    font-weight: 700;
 }
-.add-admin form{
+
+.add-admin form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.add-admin form input{
+
+.add-admin form input {
     padding: 10px;
     width: 300px;
     height: 40px;
-     border: 0;
-     border-radius: 10px;
-     border: 0.5px solid rgb(175, 175, 175);
-     margin: 5px;
+    border: 0;
+    border-radius: 10px;
+    border: 0.5px solid rgb(175, 175, 175);
+    margin: 5px;
 }
-.add-admin-btn{
+
+.add-admin-btn {
     border-radius: 10px;
     background-color: var(--primary-red);
     color: #fff;
     font-weight: 600;
     border: 0;
     width: 300px;
-     height: 30px;
-     transition:all .3s ease-in-out
+    height: 30px;
+    transition: all .3s ease-in-out
 }
-.add-admin-btn:hover{
+
+.add-admin-btn:hover {
     background: none;
     background-color: #fff;
-    border: 1px solid  var(--primary-red) ;
-    color:  var(--primary-red);
+    border: 1px solid var(--primary-red);
+    color: var(--primary-red);
     font-weight: 700;
 }
-.err-msg{
+
+.err-msg {
     text-align: center;
     color: red;
     font-weight: 600;
-  }
+}

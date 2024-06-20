@@ -5,13 +5,20 @@ const db = require('./config/connection')
 const app = express();
 const bodyParser = require('body-parser');
 const dotenv=require('dotenv')
+const cookieParser=require('cookie-parser')
 const passport =require('passport')
+
+const corsOptions = {
+  origin: 'http://localhost:3000', 
+  credentials: true 
+};
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize())
+app.use(cookieParser());
 db.connect()
 
  dotenv.config()

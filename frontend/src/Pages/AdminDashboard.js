@@ -15,7 +15,7 @@ function AdminDashboard() {
     <>
       <Sidebar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isAdmin={true} />} />
         <Route path="/add-packages" element={<AddPackages />} />
         <Route path="/edit-package" element={<EditPackage />} />
         <Route path="/add-deals" element={<AddDeals />} />

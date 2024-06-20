@@ -1,37 +1,27 @@
-const mongoose=require('mongoose')
+const mongoose = require('mongoose')
 
-const companyDataSchema=new mongoose.Schema({
-  name:{
-    type:String,
-    required:true
+const companyDataSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
   },
-  companyLogo: String,
   industry: String,
   address: String,
   city: String,
   country: String,
-  postalCode: String,
-  phoneNumber: String,
-  whatsapp:String,
-  emailAddress: String,
+  phone: Number,
+  adminPhone: Number,
+  whatsapp: Number,
+  email: String,
   description: String,
-  foundedDate: Date,
+  foundedDate: String,
   employees: Number,
-  instagramLink:String,
-  facebookLink:String,
-  services:[{
-    name:{
-    type:String,
-    required:true
-},
-description:{
-    type:String,
-}
-
-  }
-    
-  ],
-  termsAndCondition:String
+  insta: String,
+  fb: String,
+  services: [String],
+  activities: [String],
+  about: String,
+  termsAndCondition: String
 })
-const Company = mongoose.model('Company',companyDataSchema)
-module.exports=Company
+const Company = mongoose.model('Company', companyDataSchema)
+module.exports = Company

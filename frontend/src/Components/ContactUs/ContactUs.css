@@ -1,70 +1,83 @@
-.contact-box{
+.contact-box {
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(131, 127, 127, 0.356);
     padding: 1rem;
     margin: 2rem;
 }
-.contact-box h2{
+
+.contact-box h2 {
     font-weight: 700;
 }
-.contact-header{
+
+.contact-header {
     text-align: center;
-   padding: 2rem;
+    padding: 2rem;
 }
-.contact-details{
+
+.contact-details {
     padding-left: 4rem;
 }
-.contact-details h4{
-   font-weight: 700;
-   margin-bottom:5px;
+
+.contact-details h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
 }
-.contact-details p{
+
+.contact-details p {
     margin-bottom: 3px;
     margin-left: 0;
 }
-.enquiry-form-div{
-   display: flex;
-   flex-direction: column;
-   margin-top: 10px;
+
+.enquiry-form-div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
-.enquiry-form-div h4{
+
+.enquiry-form-div h4 {
     color: var(--primary-red);
     font-weight: 700;
 }
-.enquiry-email-input{
+
+.enquiry-email-input {
     width: 80%;
     height: 40px;
-     border: 0;
-     border-radius: 10px;
-     border: 0.5px solid rgb(175, 175, 175);
-     margin: 5px;
-}
-.enquiry-text-area{
-    padding: 2px;
-    width: 80%;
-   height: 100px;
     border: 0;
     border-radius: 10px;
     border: 0.5px solid rgb(175, 175, 175);
     margin: 5px;
 }
-.enquiry-btn{
+
+.enquiry-text-area {
+    padding: 2px;
+    width: 80%;
+    height: 100px;
+    border: 0;
     border-radius: 10px;
+    border: 0.5px solid rgb(175, 175, 175);
+    margin: 5px;
+}
+
+.enquiry-btn {
+    border-radius: 10px;
+    margin-left: 3px;
     background-color: var(--primary-red);
     color: #fff;
     font-weight: 600;
     border: 0;
     width: 100px;
-     height: 30px;
-     transition:all .3s ease-in-out
+    height: 35px;
+    transition: all .3s ease-in-out
 }
-.enquiry-btn:hover{
+
+.enquiry-btn:hover {
     background: none;
     background-color: #fff;
-    border: 1px solid  var(--primary-red) ;
-    color:  var(--primary-red);
+    border: 1px solid var(--primary-red);
+    color: var(--primary-red);
     font-weight: 700;
 }
-svg{
+
+svg {
     width: 20px;
 }

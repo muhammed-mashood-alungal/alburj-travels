@@ -20,18 +20,13 @@ const topDealSchema = new Schema({
     },
     baggage: {
         type: String,
-        required :true
-    },
-    image: {
-        type:String,
-        required:true
+        required: true
     },
     description: {
         type: String,
-        required:true
+        required: true
     }
 });
 
 const TopDeals = mongoose.model('TopDeals', topDealSchema);
-
 module.exports = TopDeals;

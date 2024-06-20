@@ -5,11 +5,11 @@ import Footer from '../Components/Footer/Footer'
 
 function Packagedetails() {
   return (
-    <div>
+    <>
       <Navbar/>
       <EachPackage/>
       <Footer/>
-    </div>
+    </>
   )
 }
 
