@@ -19,11 +19,11 @@
     
 }   
 .service-section{
-    background:linear-gradient(rgb(7, 0, 1),rgba(255, 0, 0, 0.39)),url('../../assets/services.jpg');
-    
+    /*background:linear-gradient(rgb(7, 0, 1),rgba(255, 0, 0, 0.39)),url('../../assets/services.jpg');*/
+    background-color: var(--primary-red);
 }
 .globe-icon{
-     font-size: 35px;
+     font-size: 2em;
      margin-left: 0;
      transition: margin-left ease-in-out .2s;
 }

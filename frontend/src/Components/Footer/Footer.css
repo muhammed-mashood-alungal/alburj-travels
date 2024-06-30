@@ -28,10 +28,11 @@
 }
 
 .footer .logo-text span {
-    color:  var(--primary-red);
+    color: var(--primary-red);
 }
 
-.footer .contact span, .footer .socials a {
+.footer .contact span,
+.footer .socials a {
     display: block;
     margin: 10px 0;
 }

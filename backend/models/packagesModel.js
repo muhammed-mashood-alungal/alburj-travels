@@ -3,56 +3,29 @@ const mongoose = require('mongoose');
 
 const packageSchema = new mongoose.Schema({
   name: {
-    type:String,
-    required:true
+    type: String,
+    required: true
   },
-  destination:{
-    type:String,
-    required:true
+  destination: {
+    type: String,
+    required: true
   },
-  description:{
-    type :String ,
-    required :true
+  price: {
+    type: Number,
+    required: true
   },
-  duration: {
-    days: {
-      type: Number,
-      required: true
-    },
-    nights: {
-      type: Number,
-      required: true
-    }
+  description: {
+    type: String,
+    required: true
   },
-  images: [String], 
+  days: { type: Number },
+  nights: { type: Number },
   activities: [String],
-  reviews:[{
-    customerId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Customer',
-    },
-    customerName:{
-      type:String,
-      required: true
-    },
-    rating: {
-      type: Number,
-      min: 1,
-      max: 5,
-    },
-    comment: {
-      type: String,
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now
-    }
-  }],
-  createdAt:{
-    type:Date,
+  createdAt: {
+    type: Date,
     default: Date.now
   }
- 
+
 });
 
 const packages = mongoose.model('packages', packageSchema);

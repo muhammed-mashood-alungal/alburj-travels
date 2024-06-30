@@ -16,31 +16,37 @@ import AllPackages from './Pages/AllPackages';
 import AllDealsPage from './Pages/AllDealsPage';
 import AddAdmin from './AdminComponents/AddAdmin/AddAdmin';
 import ContactUs from './Components/ContactUs/ContactUs';
+import EditingPage from './Pages/EditingPage';
+import ShowDetailsPage from './Pages/ShowDetailsPage';
+import { AuthProvider } from './Contexts/authContext';
 function App() {
   
   return (
+    <AuthProvider>
     <Fragment>
     <Router>
       <ScrollToTop/>
     <Routes>
+    
     <Route path='/' element={<Main />} />
     <Route path='/about' element={<AboutPage/>} />
     <Route path='/signup' element={<SignUpPage/>} />
-    <Route path='/login' element={<LoginPage/>} />
-    <Route path='/package' element={<Packagedetails/>} />
+    <Route path='/login' element={<LoginPage/>} /> 
+    <Route path='/package/:packageId' element={<Packagedetails/>} />
     <Route path='/packages' element={<AllPackages/>} />
-    <Route path='/deal' element={<DealDetails/>} />
+    <Route path='/deal/:dealId' element={<DealDetails/>} />
     <Route path='/deals' element={<AllDealsPage/>} />
     <Route path='/review' element={<AddReviewPage/>} />
     <Route path='/contact' element={<ContactUs/>} />
-
+    
     <Route path='/admin/*' element={<AdminDashboard/>} />
     <Route path='/admin/login' element={<AdminLoginPage/>} />
-    <Route path='/admin/add-admin' element={<AddAdmin/>} />
+    <Route path='/admin/show/*' element={<ShowDetailsPage/>}/>
+    <Route path='/admin/edit/*' element={<EditingPage/>}/>
     </Routes>
     </Router>
     </Fragment>
-  
+    </AuthProvider>
   );
 }
 
