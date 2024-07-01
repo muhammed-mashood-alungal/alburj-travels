@@ -14,12 +14,12 @@ AL BURJ TRAVELS is a web application for a travel agency where users can explore
    ```bash
    git clone <repository_url> 
 2.Install Node.js and MongoDB if not already installed.
-3. Install dependencies:
+3. Install dependencies and start:
    
    ```bash
    npm install
-  //then start 
-  npm start
+
+   npm start
 
 
 
