@@ -120,7 +120,7 @@ function AddPackages() {
       }).then((res => {
         alert('added Successfully')
       })).catch(err => {
-        error('Error Occured')
+       console.log('Error Occured')
       })
       navigate('/admin/add-packages');
     } catch (error) {

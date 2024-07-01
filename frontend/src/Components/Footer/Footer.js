@@ -11,7 +11,7 @@ const Footer = () => {
                 const response = await axios.get(`http://localhost:8000/api/admin/company`);
                 setCompanyInfo(response.data)
             } catch (error) {
-                alert('Error fetching deal details:', error);
+                alert( error);
             }
         };
         fetchCompanyDetails();
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                &copy; travelagency.com | Designed by YourName
+                &copy; {companyInfo.name}
             </div>
         </footer>
     );

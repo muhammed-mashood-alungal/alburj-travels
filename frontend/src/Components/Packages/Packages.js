@@ -5,10 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faLocationDot, faSun, faMoon, faStar } from '@fortawesome/free-solid-svg-icons'
 import { useLocation, Link } from 'react-router-dom'
 import axios from 'axios'
+import Aos from 'aos'
 function Packages() {
 
     const [packages, setPackages] = useState([])
-    const location = useLocation();
+    const location = useLocation();  
     const isMainPage = location.pathname === '/'
     console.log(isMainPage)
 
@@ -16,6 +17,10 @@ function Packages() {
         axios.get('http://localhost:8000/api/package').then((response) => {
             setPackages(response.data)
         })
+        Aos.init({
+            duration:500,
+            once:true
+          })
     }, [])
 
     const renderImage = (packageId) => {
@@ -26,14 +31,13 @@ function Packages() {
         <>
             <section className={`container package-section ${isMainPage ? '' : 'inner-page'}`} id='package-section'>
                 <div className="package-title-div">
-
-                    <h2 className='package-title'>Here is Our <font className="highlights"> Popular Packages </font>to Explore </h2>
+    <h2 className='package-title' data-aos="fade-right">Here is Our <font className="highlights"> Popular Packages </font>to Explore </h2>
                 </div>
                 <div className="packages">
-                    <div className="row">
+                    <div className="row rows">
                         {
                             packages.map((pack, index) => {
-                                return <div className="col-md-3 package-col">
+                                return <div className="col-md-3 col-sm-6 package-col" data-aos="fade-up">
                                     <div className='package' key={index}>
                                         <div className="image-container">
                                             {
@@ -57,130 +61,6 @@ function Packages() {
                                 </div>
                             })
                         }
-                        <div className="col-md-3 package-col">
-                            <div className='package'>
-                                <div className="image-container">
-                                    <img src={Dimage} alt="package image" className='package-image' />
-                                </div>
-                                <div className='package-content'>
-                                    <h5>Package Name</h5>
-                                    <p><FontAwesomeIcon icon={faLocationDot} className='icon' /> Location Country , Region</p>
-                                    <p><FontAwesomeIcon icon={faSun} className='icon' /> Days: 5 &nbsp;&nbsp;&nbsp;
-                                        <FontAwesomeIcon icon={faMoon} className='icon' /> Night:5</p>
-                                    <p className="rating-stars">
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                    </p>
-                                    <div>
-                                        <p>Starts From <br /><b>220 AED</b> </p>
-                                        <button className='package-explore-btn'>Explore <FontAwesomeIcon className="arrow-icon" icon={faArrowRight} />  </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-3 package-col">
-                            <div className='package'>
-                                <div className="image-container">
-                                    <img src={Dimage} alt="package image" className='package-image' />
-                                </div>
-                                <div className='package-content'>
-                                    <h5>Package Name</h5>
-                                    <p><FontAwesomeIcon icon={faLocationDot} className='icon' /> Location Country , Region</p>
-                                    <p><FontAwesomeIcon icon={faSun} className='icon' /> Days: 5 &nbsp;&nbsp;&nbsp;
-                                        <FontAwesomeIcon icon={faMoon} className='icon' /> Night:5</p>
-                                    <p className="rating-stars">
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                    </p>
-                                    <div>
-                                        <p>Starts From <br /><b>220 AED</b> </p>
-                                        <button className='package-explore-btn'>Explore <FontAwesomeIcon className="arrow-icon" icon={faArrowRight} />  </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-3 package-col">
-                            <div className='package'>
-                                <div className="image-container">
-                                    <img src={Dimage} alt="package image" className='package-image' />
-                                </div>
-                                <div className='package-content'>
-                                    <h5>Package Name</h5>
-                                    <p><FontAwesomeIcon icon={faLocationDot} className='icon' /> Location Country , Region</p>
-                                    <p><FontAwesomeIcon icon={faSun} className='icon' /> Days: 5 &nbsp;&nbsp;&nbsp;
-                                        <FontAwesomeIcon icon={faMoon} className='icon' /> Night:5</p>
-                                    <p className="rating-stars">
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                    </p>
-                                    <div>
-                                        <p>Starts From <br /><b>220 AED</b> </p>
-                                        <button className='package-explore-btn'>Explore <FontAwesomeIcon className="arrow-icon" icon={faArrowRight} />  </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-3 package-col">
-                            <div className='package'>
-                                <div className="image-container">
-                                    <img src={Dimage} alt="package image" className='package-image' />
-                                </div>
-                                <div className='package-content'>
-                                    <h5>Package Name</h5>
-                                    <p><FontAwesomeIcon icon={faLocationDot} className='icon' /> Location Country , Region</p>
-                                    <p><FontAwesomeIcon icon={faSun} className='icon' /> Days: 5 &nbsp;&nbsp;&nbsp;
-                                        <FontAwesomeIcon icon={faMoon} className='icon' /> Night:5</p>
-                                    <p className="rating-stars">
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                    </p>
-                                    <div>
-                                        <p>Starts From <br /><b>220 AED</b> </p>
-                                        <button className='package-explore-btn'>Explore <FontAwesomeIcon className="arrow-icon" icon={faArrowRight} />  </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-3 package-col">
-                            <div className='package'>
-                                <div className="image-container">
-                                    <img src={Dimage} alt="package image" className='package-image' />
-                                </div>
-                                <div className='package-content'>
-                                    <h5>Package Name</h5>
-                                    <p><FontAwesomeIcon icon={faLocationDot} className='icon' /> Location Country , Region</p>
-                                    <p><FontAwesomeIcon icon={faSun} className='icon' /> Days: 5 &nbsp;&nbsp;&nbsp;
-                                        <FontAwesomeIcon icon={faMoon} className='icon' /> Night:5</p>
-                                    <p className="rating-stars">
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                    </p>
-                                    <div>
-                                        <p>Starts From <br /><b>220 AED</b> </p>
-                                        <button className='package-explore-btn'>Explore <FontAwesomeIcon className="arrow-icon" icon={faArrowRight} />  </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>

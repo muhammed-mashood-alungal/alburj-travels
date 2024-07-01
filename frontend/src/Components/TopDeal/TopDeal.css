@@ -1,5 +1,5 @@
 .top-deal-section {
-    margin-top: 65px;
+    margin-top: 10px;
 }
 
 .deal-title-div {
@@ -36,10 +36,13 @@
     width: 100%;
     padding: 0;
     margin-bottom: 1.5rem;
-
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(131, 127, 127, 0.356);
     transition: all ease-in-out .3s;
+}
+.deal h5{
+  margin: 2px;
+  font-weight: 400;
 }
 
 .deal:hover {
@@ -59,7 +62,7 @@
 
 .potrait-container {
     border-radius: 15px 0 0 15px;
-    width: 45%;
+   width:45%;
     height: 188px;
     overflow: hidden;
     position: relative;
@@ -74,22 +77,24 @@
 
 .deal-content p {
     margin: 2px;
-    font-size: 13px;
+    font-size: 90%;
     font-weight: 400;
 }
 
 .deal-content h5 {
     font-weight: 700px;
+    margin-bottom: 5px;
 }
 
 .explore-btn {
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: 600;
     width: 100px;
     height: 30px;
     border-radius: 20px;
     border: 0;
     cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(131, 127, 127, 0.356);
     background-color: #fff;
     bottom: 2px;
     cursor: pointer;
@@ -107,4 +112,10 @@
 
 .explore-btn:hover .arrow-icon {
     margin-left: 3px;
+}
+@media (max-width: 965px) {
+    .potrait-container {
+       width:35%;
+       
+    }
 }

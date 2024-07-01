@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneVolume, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from 'react-hook-form';
 import axios from 'axios'
+import Aos from 'aos'
 function ContactUs() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -14,31 +15,35 @@ function ContactUs() {
       try {
         const response = await axios.get(`http://localhost:8000/api/admin/company`);
         setCompanyInfo(response.data)
+        console.log(response.data)
       } catch (error) {
-        alert('Error fetching deal details:', error);
+        console.log('Error fetching Company details details:', error);
       }
     };
     fetchCompanyDetails();
-
+    Aos.init({
+      duration:500,
+      once:true
+    }) 
   }, [])
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data) => {  
     try {
       const response = await axios.post('http://localhost:8000/api/user/enquiry/whatsapp', data);
       window.open(response.data, '_blank')
     } catch (error) {
-      alert('error returned' + error)
+      alert('error returned' + error) 
     }
   };
 
   return (
-    <>
+    <> 
       <section className='container' id='contact-section'>
         <div>
           <div className="contact-box">
-            <h2 className='contact-header'><font className="highlights">Get in Touch</font> with Us</h2>
+            <h2 className='contact-header' data-aos="fade-right"><font className="highlights">Get in Touch</font> with Us</h2>
             <div className="row">
-              <div className="contact-details col-md-6">
+              <div className="contact-details col-md-6 " data-aos="fade-up">
                 <h4>{companyInfo.name}</h4>
                 <p>{companyInfo.industry}</p>
                 <address>{companyInfo.address}</address>
@@ -48,7 +53,7 @@ function ContactUs() {
                   &nbsp;WhatsApp : {companyInfo.whatsapp}</h6>
 
               </div>
-              <div className="enquiry-form-div col-md-6">
+              <div className="enquiry-form-div col-md-6" data-aos="fade-up">
                 <h4><u>Let's Enquiry</u></h4>
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
                   <input type="name" placeholder='Enter Your Name here...' className='enquiry-email-input' value={enquiryData.name}

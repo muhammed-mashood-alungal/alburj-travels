@@ -4,20 +4,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
+import Aos from 'aos'
 function Reviews({ isAdmin }) {
   const [reviews, setReviews] = useState([])
   useEffect(() => {
     axios.get('http://localhost:8000/api/user/reviews').then((reviewsArray) => {
       setReviews(reviewsArray.data)
+      console.log(reviewsArray.data)
     }).catch((err) => {
-      alert(err)
+      console.log(err)
     })
-  })
+    Aos.init({
+      duration:500,
+      once:true
+    })
+  },[])
   const deleteReview = (reviewId) => {
     axios.delete(`http://localhost:8000/api/user/reviews/${reviewId}`).then((response) => {
       alert('deleted Succesfully')
     }).catch((err) => {
-      alert(err + 'Error While Deleting')
+      console.log(err)
+      alert('Error While Deleting')
     })
   }
   return (
@@ -29,7 +36,7 @@ function Reviews({ isAdmin }) {
         <div className=" reviews">
           {reviews?.map((review, index) => {
             return <div className=" ">
-              <div className="review">
+              <div className="review" data-aos="fade-up">
                 <div className="review-details">
                   <h5>{review.name}</h5>
                 </div>
@@ -47,53 +54,6 @@ function Reviews({ isAdmin }) {
           })}
 
 
-          <div className="">
-            <div className="review">
-              <div className="review-details">
-                <h5>User Name</h5>
-                <h6>25 Aug 2020</h6>
-              </div>
-              <div className='review-content'>
-                <p>lorem is is a dummy data website .there we get a lot of dummt text which that we can use for out development process</p>
-              </div>
-            </div>
-          </div>
-
-          <div className=" ">
-            <div className="review">
-              <div className="review-details">
-                <h5>User Name</h5>
-                <h6>25 Aug 2020</h6>
-              </div>
-              <div className='review-content'>
-                <p>lorem is is a dummy data website .there we get a lot of dummt text which that we can use for out development process</p>
-              </div>
-            </div>
-          </div>
-
-          <div className=" ">
-            <div className="review">
-              <div className="review-details">
-                <h5>User Name</h5>
-                <h6>25 Aug 2020</h6>
-              </div>
-              <div className='review-content'>
-                <p>lorem is is a dummy data website .there we get a lot of dummt text which that we can use for out development process</p>
-              </div>
-            </div>
-          </div>
-
-          <div className=" ">
-            <div className="review">
-              <div className="review-details">
-                <h5>User Name</h5>
-                <h6>25 Aug 2020</h6>
-              </div>
-              <div className='review-content'>
-                <p>lorem is is a dummy data website .there we get a lot of dummt text which that we can use for out development process</p>
-              </div>
-            </div>
-          </div>
         </div>
         {
           !isAdmin && <div className="review-add-btn-div">

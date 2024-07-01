@@ -7,7 +7,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
 import { useAuth } from '../../Contexts/authContext';
 import { useForm } from 'react-hook-form';
-
+import Aos from 'aos'
 function EachPackage() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [bookingData, setBookingData] = useState({})
@@ -43,6 +43,10 @@ function EachPackage() {
       alert(err)
     }
 
+    Aos.init({
+      duration:500,
+      once:true
+    }) 
   }, [])
 
   const handleStartDateChange = (date) => {
@@ -77,21 +81,21 @@ function EachPackage() {
       <section className='each-package-section container'>
         <div className="row">
           <div className="details-section col-md-8 col-sm-12">
-            <h2>{packageData?.name}</h2>
+            <h2 data-aos="fade-right">{packageData?.name}</h2>
             <div className="package-images">
-              <div className="package-mian-img-div">
+              <div className="package-mian-img-div" data-aos="fade-right">
                 <img src={mainImageUrl} alt="" className="package-main-img" />
               </div>
               <div className="package-other-images">
                 {
                   subImages?.map((image, index) => {
-                    return <img src={image} alt="" className="sub-img" key={index} onClick={() => { swapImages(image) }} />
+                    return <img src={image} alt="" data-aos="fade-down" className="sub-img" key={index} onClick={() => { swapImages(image) }} />
                   })
                 }
               </div>
 
             </div>
-            <div className="package-content-div">
+            <div className="package-content-div" data-aos="fade-down">
               <h5><font className="highlights">Destination </font> : {packageData?.destination}</h5>
               <h5><font className="highlights">Duration </font> :{packageData?.days}-Days &nbsp; &nbsp; {packageData?.nights}-Nights</h5>
               <h5><font className="highlights">Price</font> : {packageData?.price} </h5>
@@ -104,7 +108,7 @@ function EachPackage() {
             </div>
           </div>
           <div className="booking-section col-md-4 col-sm-12">
-            <div className="booking-div">
+            <div className="booking-div" data-aos="fade-left">
               <h2>Book Now</h2>
               <form action="" onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" placeholder='Enter Your Name here' className='booking-input' value={bookingData.name}
@@ -166,7 +170,7 @@ function EachPackage() {
                         onClick={() => { setIsGuestUser(!isGuestUser) }} /><p>Continue as Guest User</p>
                       </div>
                       {!isGuestUser && <button className="login-btn ">Login</button>}
-                      :''
+                      
                     </div>
 
                   ) : ('')

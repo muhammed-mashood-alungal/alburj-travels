@@ -3,18 +3,16 @@ import '../Navbar/Navbar.css'
 import logo from '../../assets/alburj-logo.jpg'
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import ContactUs from '../ContactUs/ContactUs';
-import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisVertical, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { useAuth } from '../../Contexts/authContext';
-
 function Navbar() {
   const { isLoggedIn, logout, checkLoginStatus } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [navBackground, setNavBackground] = useState(false);
 
   useEffect(() => {
+    
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
