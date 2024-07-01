@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../AboutUs/AboutUs.css'
 import axios from 'axios'
+import Aos from 'aos'
 function AboutUs() {
   const [companyInfo, setCompanyInfo] = useState({})
   useEffect(() => {
@@ -13,21 +14,26 @@ function AboutUs() {
       }
     };
     fetchCompanyDetails();
+
+    Aos.init({
+      duration:500,
+      once:true
+    }) 
   }, [])
   return (
     <>
       <section className="about-bg-image-div">
         <div className="about-bg-image">
-          <h1>About Us</h1>
+          <h1 data-aos="fade-up">About Us</h1>
         </div>
       </section>
       <section className='container about-content-section'>
-        <p>&nbsp; &nbsp;
+        <p data-aos="fade-up">&nbsp; &nbsp;
           {companyInfo.about}
         </p>
         <hr />
-        <h2 className='highlights'>Terms And Conditions</h2>
-        <p>{companyInfo.termsAndCondition}</p>
+        <h2 className='highlights' data-aos="fade-right">Terms And Conditions</h2>
+        <p data-aos="fade-up">{companyInfo.termsAndCondition}</p>
       </section>
     </>
   )

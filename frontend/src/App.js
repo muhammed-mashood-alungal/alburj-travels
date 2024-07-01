@@ -14,7 +14,6 @@ import AddReviewPage from './Pages/AddReviewPage';
 import ScrollToTop from './Components/ScrollToTop';
 import AllPackages from './Pages/AllPackages';
 import AllDealsPage from './Pages/AllDealsPage';
-import AddAdmin from './AdminComponents/AddAdmin/AddAdmin';
 import ContactUs from './Components/ContactUs/ContactUs';
 import EditingPage from './Pages/EditingPage';
 import ShowDetailsPage from './Pages/ShowDetailsPage';

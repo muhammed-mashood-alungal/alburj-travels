@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios'
 import { useForm } from 'react-hook-form';
-
+import Aos from 'aos'
 function EachDeals({ isAdmin }) {
   const { dealId } = useParams();
   const [startingDate, setStartingDate] = useState(null);
@@ -28,7 +28,10 @@ function EachDeals({ isAdmin }) {
     } catch (err) {
       console.log(err)
     }
-
+    Aos.init({
+      duration:500,
+      once:true
+    })
   }, [])
 
   const handleStartDateChange = (date) => {
@@ -56,28 +59,28 @@ function EachDeals({ isAdmin }) {
         <div className="row">
           <div className="details-section col-md-8 col-sm-12">
             <Link to='/deals' className='link'>
-              <h2>Top Deals </h2>
+              <h2 data-aos="fade-right"> Top Deals </h2>
             </Link>
 
             <div className="deal-images">
-              <div className="deal-mian-img-div">
+              <div className="deal-mian-img-div" data-aos="fade-right">
                 <img src={imageUrl} alt="" className="deal-main-img" />
               </div>
 
 
             </div>
-            <div className="deal-content-div">
+            <div className="deal-content-div" data-aos="fade-down">
               <h5><font className="highlights">Origin </font> : {dealDetails?.from}</h5>
               <h5><font className="highlights">Destination </font> : {dealDetails?.to}</h5>
               <h5><font className="highlights">Airline </font> : {dealDetails?.airline}</h5>
-              <h5><font className="highlights">Baggage </font> :{dealDetails?.baggage}</h5>
-              <h5><font className="highlights">Price</font> :{dealDetails?.price} </h5>
+              <h5><font className="highlights">Baggage </font> : {dealDetails?.baggage} Kg</h5>
+              <h5><font className="highlights">Price</font> : {dealDetails?.price} AED</h5>
               <p>{dealDetails?.description} </p>
             </div>
           </div>
           {
             !isAdmin && <div className="booking-section col-md-4 col-sm-12">
-              <div className="booking-div">
+              <div className="booking-div" data-aos="fade-left">
                 <h2>Book Now</h2>
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
                   <input type="text" placeholder='Enter Your Name here' className='booking-input' value={bookingData.name}

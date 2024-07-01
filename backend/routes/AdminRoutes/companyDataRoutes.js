@@ -4,7 +4,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     getCompanyDetails().then((details) => {
-        res.status(200).json(details)
+        console.log("checking "+details)
+        res.status(200).send(details)
     }).catch((err) => {
         res.json(err)
     })

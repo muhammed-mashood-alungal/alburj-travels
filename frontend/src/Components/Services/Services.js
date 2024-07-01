@@ -1,17 +1,25 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import '../Services/Services.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import Aos from 'aos'
 function Services() {
+  useEffect(()=>{
+    Aos.init({
+      duration:500,
+      once:true
+    })           
+   
+  },[])
   return (
     <>
       <section className="service-section" id='service-section'>
         <div className="container">
           <div className="services-header">
-            <h2>We offer professional <u>Services</u> as well</h2>
+            <h2 data-aos="fade-right">We offer professional <u>Services</u> as well</h2>
           </div>
           <div className="row services">
-            <div className="service col-md-4">
+            <div className="service col-md-4" data-aos="fade-right">
               <div className='service-icon-div'>
                 <h2><FontAwesomeIcon icon={faGlobe} className='globe-icon' /></h2>
               </div>
@@ -24,7 +32,7 @@ function Services() {
 
             </div>
 
-            <div className="service col-md-4">
+            <div className="service col-md-4" data-aos="fade-right">
               <div className='service-icon-div'>
                 <FontAwesomeIcon icon={faGlobe} className='globe-icon' />
               </div>
@@ -37,7 +45,7 @@ function Services() {
 
             </div>
 
-            <div className="service col-md-4">
+            <div className="service col-md-4" data-aos="fade-right">
               <div className='service-icon-div'>
                 <FontAwesomeIcon icon={faGlobe} className='globe-icon' />
               </div>

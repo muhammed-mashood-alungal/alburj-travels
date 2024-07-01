@@ -98,8 +98,8 @@ module.exports = {
   getCompanyDetails() {
     return new Promise((resolve, reject) => {
       Company.findOne({}).then(async (details) => {
-        console.log(data)
-        resolve(data)
+        console.log(details)
+        resolve(details)
       }).catch((err) => {
         reject(err)
       })

@@ -38,12 +38,15 @@
 }
 
 .heading-div h1 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 700;
+  font-size: 3em;
 }
 
 .service-btn {
   background-color: #fff;
-  width: 130px;
+  width: 133px;
   height: 35px;
   margin: 10px;
   border-radius: 25px;
